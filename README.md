@@ -280,9 +280,11 @@ $  awk 'NR>1' miRNA_converted.tsv >> prioritized_snoRNA_Decoys_master.saf
 
   # 11.1 for miRNAs
 
+      ----> DE_miRNA_STAR_and_feactureCounts.ipynb
+
   # 11.2 for snoRNAs
 
-----> /group/soranzo/manuel.tardaguila/small_rna/snoRNAs/DE_snoRNA_STAR_and_feactureCounts.ipynb
+       ----> DE_snoRNA_STAR_and_feactureCounts.ipynb
 
 
 
