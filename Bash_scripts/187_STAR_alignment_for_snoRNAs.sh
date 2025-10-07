@@ -7,6 +7,8 @@ MASTER_ROUTE=$1
 analysis=$2
 reference_fasta=$3
 reference_features=$4
+feature=$5
+
 trimmed_dir=$(echo "/scratch/manuel.tardaguila/my_own_RNA_pipeline/new_trimming/trimmed_sequences/")
 
 
@@ -20,6 +22,11 @@ Log_files=$(echo "$output_dir""/""Log_files/")
 
 
 mkdir -p $Log_files
+
+
+counts_dir=$(echo "/group/soranzo/manuel.tardaguila/small_rna/""$feature""/")
+
+mkdir -p $counts_dir
 
 
 sample_array=$(echo 'MCO_01334,MCO_01335,MCO_01338,MCO_01339,MCO_01342,MCO_01343')
@@ -83,7 +90,7 @@ do
     																						      --outFileNamePrefix $prefix \
     																						       --alignIntronMax 1 \
     																						       --alignEndsType EndToEnd \
-    																						       --outFilterMultimapNmax 1 \
+    																						       --outFilterMultimapNmax 20 \
     																						       --outFilterMismatchNmax 1 \
     																							--outFilterScoreMinOverLread 0.9 \
     																						      --outFilterMatchNminOverLread 0.9 \
@@ -110,11 +117,11 @@ do
 
      echo "$total_memory"
 
-     output_counts=$(echo "/group/soranzo/manuel.tardaguila/small_rna/snoRNAs/""$sample_array_sel""_raw_counts.txt")
+     output_counts=$(echo "$counts_dir""$sample_array_sel""_raw_counts.txt")
      input_bam=$(echo "$prefix""Aligned.sortedByCoord.out.bam")
 
 
-     # --dependency=afterany:$$myjobid_STAR_alingment
+     # --dependency=afterany:$myjobid_STAR_alingment
 
      conda activate /home/manuel.tardaguila/conda_envs/featureCounts
 
