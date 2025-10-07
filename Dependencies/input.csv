@@ -1,7 +1,0 @@
-sample,fastq_1
-wt_1,/scratch/manuel.tardaguila/my_own_RNA_pipeline/new_trimming/trimmed_sequences/MCO_01334_smLIB_S1_L004_R1_trimmed.fastq.gz
-rs62237617_1,/scratch/manuel.tardaguila/my_own_RNA_pipeline/new_trimming/trimmed_sequences/MCO_01335_smLIB_S2_L004_R1_trimmed.fastq.gz
-wt_2,/scratch/manuel.tardaguila/my_own_RNA_pipeline/new_trimming/trimmed_sequences/MCO_01338_smLIB_S3_L004_R1_trimmed.fastq.gz
-rs62237617_2,/scratch/manuel.tardaguila/my_own_RNA_pipeline/new_trimming/trimmed_sequences/MCO_01339_smLIB_S4_L004_R1_trimmed.fastq.gz
-wt_3,/scratch/manuel.tardaguila/my_own_RNA_pipeline/new_trimming/trimmed_sequences/MCO_01342_smLIB_S5_L004_R1_trimmed.fastq.gz
-rs62237617_3,/scratch/manuel.tardaguila/my_own_RNA_pipeline/new_trimming/trimmed_sequences/MCO_01343_smLIB_S6_L004_R1_trimmed.fastq.gz

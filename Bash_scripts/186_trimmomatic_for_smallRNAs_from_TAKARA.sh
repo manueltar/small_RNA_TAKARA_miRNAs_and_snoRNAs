@@ -112,49 +112,6 @@ do
 
 
 
-    # ############# Align using bowtie2 ###########################################################################################################################################################################################
-
-    #  type=$(echo "$sample_array_sel""_alingment")
-    #  outfile_alingment=$(echo "$Log_files""outfile_3_""$type"".log")
-    #  touch $outfile_alingment
-    #  echo -n "" > $outfile_alingment
-    #  name_alingment=$(echo "$type""_job")
-    #  seff_name=$(echo "seff""_""$type")
-
-
-
-    #  processors=$(echo '4')
-    #  mem=$(echo '4096')
-    #  total_memory=$(echo "scale=0; ($mem / 1) * $processors" | bc)
-    #  total_memory=$(echo "$total_memory""M")
-
-    #  aligned_reads=$(echo "$output_dir""$raw_sample"".sam")
-    #  INDEX_PATH="/scratch/manuel.tardaguila/my_own_RNA_pipeline/reference_sequences/hsa_mature_index_bt2"
-
-
-    #  echo "$total_memory"
-
-
-
-    #  #     bowtie2 --local -N 0 -L 18 -i S,1,0.50 -k 1000 -x hsa_mature_index_bt2 -U raw_reads.fastq.gz -S aligned.sam -p N
-
-    #  module load bowtie2/2.4.5
-
-    #  myjobid_alingment=$(sbatch --dependency=afterany:$myjobid_FASTQC_trimmed_R1 --job-name=$name_alingment --output=$outfile_alingment --partition=cpuq --time=24:00:00 --nodes=1 --ntasks-per-node=$processors --mem-per-cpu=$mem --parsable --wrap="bowtie2 \
-    # 																												      --local \
-    # 																												      -N 1 \
-    # 																												       -L 18 \
-    # 																												       -i S,1,0.50 \
-    # 																												        -k 1000 \
-    # 																													 -x $INDEX_PATH \
-    # 																													 -U $r1_TRIMMED \
-    # 																													 -S $aligned_reads \
-    # 																													 -p $processors")
-    # myjobid_seff_alingment=$(sbatch --dependency=afterany:$myjobid_alingment --open-mode=append --output=$outfile_alingment --job-name=$seff_name --partition=cpuq --time=24:00:00 --nodes=1 --ntasks-per-node=1 --mem-per-cpu=128M --parsable --wrap="seff $myjobid_alingment >> $outfile_alingment")
-    
-
-
-    # exit
 done
 
 
