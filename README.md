@@ -164,7 +164,7 @@ $ bash ~/Scripts/Wraper_scripts/186_trimmomatic_for_smallRNAs_from_TAKARA.sh /sc
 
   # 8.1 for miRNAs
   
-  $ bash ~/Scripts/Wraper_scripts/187_STAR_alignment_for_snoRNAs.sh /scratch/manuel.tardaguila/ miRNAs_STAR /scratch/manuel.tardaguila/STAR_indexed_genome_for_miRNAs/ /group/soranzo/manuel.tardaguila/small_rna/miRNAs_STAR/reference_files/miRNA_converted.tsv
+  $ bash ~/Scripts/Wraper_scripts/187_STAR_alignment_for_snoRNAs.sh /scratch/manuel.tardaguila/ miRNAs_STAR /scratch/manuel.tardaguila/STAR_indexed_genome_for_mirRNAs/ /group/soranzo/manuel.tardaguila/small_rna/miRNAs_STAR/reference_files/miRNA_converted.tsv
 
   # 8.2 for snoRNAs
 
